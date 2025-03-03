@@ -1,7 +1,5 @@
 package models;
 
-
-import java.awt.*;
 import java.util.List;
 
 public class UsersResponse {
@@ -21,7 +19,6 @@ public class UsersResponse {
     public void setPage(int page) {
         this.page = page;
     }
-
 
     public int getTotal() {
         return total;
@@ -62,6 +59,4 @@ public class UsersResponse {
     public void setData(List <UserData> data) {
         this.data = data;
     }
-
-
 }
