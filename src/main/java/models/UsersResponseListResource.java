@@ -2,16 +2,15 @@ package models;
 
 import java.util.List;
 
-public class UsersResponse {
+public class UsersResponseListResource {
 
     private int page;
-    private List <UserData> data;
+    private List<UserDataListResource> data;
     private int per_page;
     private int total;
     private int total_pages;
     private Support support;
 
-    // Геттеры и сеттеры
     public int getPage() {
         return page;
     }
@@ -20,12 +19,12 @@ public class UsersResponse {
         this.page = page;
     }
 
-    public int getTotal() {
-        return total;
+    public List<UserDataListResource> getData() {
+        return data;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
+    public void setData(List<UserDataListResource> data) {
+        this.data = data;
     }
 
     public int getPer_page() {
@@ -34,6 +33,14 @@ public class UsersResponse {
 
     public void setPer_page(int per_page) {
         this.per_page = per_page;
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
     }
 
     public int getTotal_pages() {
@@ -50,13 +57,5 @@ public class UsersResponse {
 
     public void setSupport(Support support) {
         this.support = support;
-    }
-
-    public List <UserData> getData() {
-        return data;
-    }
-
-    public void setData(List <UserData> data) {
-        this.data = data;
     }
 }
