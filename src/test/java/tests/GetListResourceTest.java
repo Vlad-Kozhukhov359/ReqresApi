@@ -2,6 +2,9 @@ package tests;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import models.UserDataListResource;
@@ -10,11 +13,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Epic("Работа с данными пользователей")
+@Feature("Получает информацию о пользователях")
 public class GetListResourceTest {
 
     private final String BASE_URL = "https://reqres.in/api/unknown";
     private final ObjectMapper objectMapper = new ObjectMapper();
 
+    @Story("Получение информации о списке пользователей")
     @Test
     public void testGetListResource() throws Exception {
 

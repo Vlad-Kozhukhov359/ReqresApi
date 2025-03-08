@@ -1,16 +1,21 @@
 package tests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Epic("Работа с данными пользователей")
+@Feature("Получает информацию о пользователях")
 public class ResourceNotFoundTest {
 
     private final String BASE_URL = "https://reqres.in/api/unknown";
 
-
+    @Story("Проверка получения данных несуществующего пользователя")
     @Test
     public void testResourceNotFound() throws Exception {
 
