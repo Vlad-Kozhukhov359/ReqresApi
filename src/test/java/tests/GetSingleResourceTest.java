@@ -1,6 +1,9 @@
 package tests;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import models.SingleResourceResponse;
@@ -10,11 +13,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@Epic("Работа с данными пользователей")
+@Feature("Получает информацию о пользователях")
 public class GetSingleResourceTest {
 
     private final String BASE_URL = "https://reqres.in/api/unknown";
     private final ObjectMapper objectMapper = new ObjectMapper();
 
+    @Story("Получение информации о конкретном пользователе")
     @Test
     public void testGetSingleResource() throws Exception {
 
